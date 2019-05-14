@@ -2,9 +2,7 @@ import React from 'react'
 import Modal from 'react-modal';
 import GiveReviewContents from './GiveReviewContents'
 import ShowReviewContents from './ShowReviewContents'
-import ReviewBox from './ReviewBox';
-
-
+import "./kyz-react-tabs.css";
 const customStyles = {
   content : {
     top                   : '50%',
@@ -30,6 +28,7 @@ class TheWholeReviewGig extends React.Component {
     this.openModal = this.openModal.bind(this);
     this.afterOpenModal = this.afterOpenModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.beforeCloseModal = this.beforeCloseModal.bind(this);
   }
 
   openModal() {
@@ -44,11 +43,14 @@ class TheWholeReviewGig extends React.Component {
   closeModal() {
     this.setState({modalIsOpen: false});
   }
+  beforeCloseModal() {
 
+  }
   render() {
     return (
       <div>
-        <button onClick={this.openModal}>{this.props.type=='give' ? "Give A Review?":"See reviews"}</button>
+        <button onClick={this.openModal}>{this.props.type==='give' ? "Give A Review?":"See reviews"}</button>
+
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
@@ -57,7 +59,7 @@ class TheWholeReviewGig extends React.Component {
           contentLabel="Modal Box"
         >
           <div id='closeModalBox' onClick={this.closeModal}>X</div>
-          {this.props.type=='give' ? <GiveReviewContents closeit={this.closeModal}/>:<ShowReviewContents closeit={this.closeModal}/>}
+          {this.props.type==='give' ? <GiveReviewContents closeit={this.closeModal}/>:<ShowReviewContents closeit={this.closeModal}/>}
 
         </Modal>
       </div>

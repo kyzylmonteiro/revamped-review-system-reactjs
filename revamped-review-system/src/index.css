@@ -668,7 +668,56 @@ caption {
 
 /* Our css stuffs */
 
+.rating-stars{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:  center;
+  font-size: 35px;
+  border-radius: 30px;
+  width:60%;
+  height: 70%;
+}
+#ratingContainer{
+  /* background-color: LightGrey; */
+  padding-top: 5%;
+  border-radius: 20px;
+  border: 1px LightGrey solid;
 
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* modal transition */
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 2000ms ease-in-out;
+}
+@keyframes slide-in-bottom{0%{transform:translateY(1000px);opacity:0}100%{transform:translateY(0);opacity:1}}
+@keyframes slide-out-top{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-1000px);opacity:0}}
+.ReactModal__Overlay--after-open{
+    animation:slide-in-bottom .5s cubic-bezier(.25,.46,.45,.94) both;
+}
+.ReactModal__Overlay--before-close{
+    animation:slide-out-top .5s cubic-bezier(.55,.085,.68,.53) both;
+}
+/* ------- */
+/* cross  */
 #closeModalBox{
     position: absolute;
     top: 10px;
@@ -678,17 +727,24 @@ caption {
     cursor: pointer;
     color: red;
 }
+/* ---- */
+
 section {
   /* border-style: solid; */
   display: block;
   width: 100%;
-  height: 100%;
+  height: 95%;
+}
+#navbar{
+  font-size: 10px;
+  position: sticky;
 }
 #quatSec-top{
   /* border-style: solid; */
   display: block;
   width: 100%;
   height: 35%;
+  font-size: 10px;
 }
 #unquatSec-bottom{
   /* border-style: solid; */
@@ -696,8 +752,13 @@ section {
   width: 100%;
   height: 65%;
 }
-#halfSec-left , #scrollableHalfSec-left{
-  /* border-style: solid; */
+
+.TabPanel{
+  overflow-y: scroll;
+}
+#halfSec-left {
+  border:1px LightGrey solid;
+  border-radius: 25px;
   float: left;
   display: block;
   width: 50%;
@@ -705,9 +766,26 @@ section {
   overflow-y:scroll;
 }
 #scrollableHalfSec-left{
-  border-right: 1px grey solid;
+  border-right: 1px LightGrey solid;
+  float: left;
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow-y:scroll;
 }
-#halfSec-right, #scrollableHalfSec-right{
+#scrollableDiv{
+  height: 200px;
+  overflow-y: scroll;
+  color: black;
+}
+#halfSec-right{
+  /* border-style: solid; */
+  float: right;
+  display: block;
+  width: 50%;
+  height: 100%;
+}
+#scrollableHalfSec-right{
   /* border-style: solid; */
   float: right;
   display: block;
@@ -717,6 +795,7 @@ section {
 }
 #halfSec-right-top{
   /* border-style: solid; */
+  /* margin-top: 15%; */
   display: block;
   width: 100%;
   height: 50%;
@@ -734,30 +813,44 @@ section {
   right: 7px;
 }
 #reviewImgs{
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 70%;
+  max-height: 70%;
   display: block;
   margin-left: auto;
-  margin-top: 20%;
+  margin-top: 30%;
   margin-right: auto;
+}
+#productImgs{
+  float: left;
+  max-width: 100%;
+  max-height: 100%;
+}
+#ratingImgs{
+  float: right;
+  max-width: 100%;
+  max-height: 100%;
+  padding-right: 5%;
+  padding-top: 10px;
 }
 #reviewTextarea{
   resize: none;
   width: 75%;
   height: 60%;
   margin-left: auto;
-  margin-top: 7%;
   margin-right: auto;
+}
+#reviewTitle{
+  display: block;
 }
 #reviewBox{
   background-color: white;
-  padding: 7% 7% 7% 7%;
+  padding: 20px 20px 20px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3%;
+  margin-top: 30px;
   margin-bottom: 3%;
   text-align: justify;
 }
@@ -766,16 +859,51 @@ section {
   border-radius: 25px;
   height: 50px;
   width: 50px;
-  border: 1px black solid;
+  margin-left: -35px;
+  margin-top: -35px;
+  /* border: 2px LightGrey solid; */
 }
-#ratingInRB{
+#profilePicImg{
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+#ratingInRBGreen{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+
+  float: right;
+  color: black;
+  margin-right: -30px;
+  margin-top: -30px;
+  font-size: 15px;
+  font-weight: bold;
   text-align: center;
   padding-top: 10px;
-  float: right;
   border-radius: 25px;
-  height: 50px;
+  height: 30px;
   width: 50px;
-  /* border: 1px black solid; */
+  background-color: #ccff99;
+}
+#ratingInRBRed{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+
+  float: right;
+  color: white;
+  margin-right: -30px;
+  margin-top: -30px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 25px;
+  height: 30px;
+  width: 50px;
+  background-color: #ff9999;
 }
 #banner-n{
   text-align: center;
@@ -783,12 +911,27 @@ section {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: Red;
+  background-color: #ff9999;
 }
 #banner-p{
   text-align: center;
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: LightGreen;
+  background-color: #ccff99;
+}
+#homePg{
+  background-color: Lightgrey;
+  width: 40%;
+  padding: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10%;
+  border-radius: 5px;
+}
+#txt{
+  top: 100px;
+}
+body{
+  background-image: url("bg.png");
 }

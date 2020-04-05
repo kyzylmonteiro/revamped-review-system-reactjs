@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reviewpedia/static/css/main.91375b30.chunk.css",
+    "main.js": "/reviewpedia/static/js/main.9d706b19.chunk.js",
+    "main.js.map": "/reviewpedia/static/js/main.9d706b19.chunk.js.map",
+    "runtime~main.js": "/reviewpedia/static/js/runtime~main.7ad722fc.js",
+    "runtime~main.js.map": "/reviewpedia/static/js/runtime~main.7ad722fc.js.map",
+    "static/js/2.418a789b.chunk.js": "/reviewpedia/static/js/2.418a789b.chunk.js",
+    "static/js/2.418a789b.chunk.js.map": "/reviewpedia/static/js/2.418a789b.chunk.js.map",
+    "index.html": "/reviewpedia/index.html",
+    "precache-manifest.468a7a79ad29d99abb5a53acaa36eac0.js": "/reviewpedia/precache-manifest.468a7a79ad29d99abb5a53acaa36eac0.js",
+    "service-worker.js": "/reviewpedia/service-worker.js",
+    "static/css/main.91375b30.chunk.css.map": "/reviewpedia/static/css/main.91375b30.chunk.css.map",
+    "static/media/index.css": "/reviewpedia/static/media/bg.ebadb179.png",
+    "static/media/img1.png": "/reviewpedia/static/media/img1.fd5f6b5a.png",
+    "static/media/img2.png": "/reviewpedia/static/media/img2.c4f847b4.png",
+    "static/media/img3.png": "/reviewpedia/static/media/img3.5a9dfa59.png",
+    "static/media/img4.gif": "/reviewpedia/static/media/img4.7e4a3c70.gif",
+    "static/media/img5.png": "/reviewpedia/static/media/img5.08743c5a.png",
+    "static/media/img6.png": "/reviewpedia/static/media/img6.7e5741e9.png",
+    "static/media/img7.png": "/reviewpedia/static/media/img7.e346456a.png"
+  }
+}

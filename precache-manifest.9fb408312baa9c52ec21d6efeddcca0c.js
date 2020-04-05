@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86535c7b2d47557dee72f34203e53d94",
+    "revision": "ba5d6c8de00a110a11f59f270af4c8f2",
     "url": "/revamped-review-system-reactjs/index.html"
   },
   {
-    "revision": "2cbe54271256cf75e0f2",
+    "revision": "63a84db0cd02c0a831f2",
     "url": "/revamped-review-system-reactjs/static/css/main.3e9d506b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/revamped-review-system-reactjs/static/js/2.418a789b.chunk.js"
   },
   {
-    "revision": "2cbe54271256cf75e0f2",
-    "url": "/revamped-review-system-reactjs/static/js/main.9d706b19.chunk.js"
+    "revision": "63a84db0cd02c0a831f2",
+    "url": "/revamped-review-system-reactjs/static/js/main.0d814472.chunk.js"
   },
   {
     "revision": "d87ff2d0fee74d08ea85",
